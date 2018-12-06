@@ -1,0 +1,62 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.alert{
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+    top: 0px;
+    transition: 0.5s;
+    animation: fadeIn 0.5s forwards;
+    box-shadow: inset 0px 0px 20px -5px #000;
+}
+.alert button{
+    position: absolute;    
+    left: 94%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #000;
+    pointer-events: all;
+    outline: none;
+}
+.alert span{
+    cursor: pointer;
+}
+@keyframes fadeIn{
+    0%{
+        top: -150px;
+    }
+    100%{
+        top: 0%;
+    }
+}
+.alert.alert-danger{
+    background: linear-gradient(to top, rgba(198, 42, 42, 0.71),rgba(217, 73, 73, 0.6));
+    color: #7b1414;
+    pointer-events: none;
+    outline: none;
+}
+.alert.alert-succes{
+    background: linear-gradient(to top, rgba(31, 216, 130, 0.71),rgba(68, 203, 135, 0.6));
+    color: #155d13;
+    pointer-events: none;
+    outline: none;
+}
+.alert.alert-warning{
+    background: linear-gradient(to top, rgba(216, 216, 31, 0.71),rgba(198, 203, 68, 0.56));
+    color: #525d13;
+    pointer-events: none;
+    outline: none;
+}
+.alert.alert-info{
+    background: linear-gradient(to top, rgba(31, 166, 216, 0.71),rgba(68, 151, 203, 0.56));
+    color: #13415d;
+    pointer-events: none;
+    outline: none;
+}
